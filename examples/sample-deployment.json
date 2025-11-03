@@ -1,0 +1,32 @@
+{
+  "resources": [
+    {
+      "memory": 2147483648,
+      "cpu": 1000,
+      "gpu": {
+        "units": 1,
+        "attributes": {
+          "vendor": {
+            "model": "rtx4090",
+            "ram": "24gi"
+          }
+        }
+      },
+      "storage": [
+        {
+          "class": "ephemeral",
+          "size": 10737418240
+        }
+      ],
+      "count": 1,
+      "endpoint_quantity": 1,
+      "ip_lease_quantity": 0
+    }
+  ],
+  "price": {
+    "denom": "uakt",
+    "amount": "100.00"
+  },
+  "price_precision": 6
+}
+
