@@ -1,0 +1,35 @@
+{
+  "resources": [
+    {
+      "memory": 17179869184,
+      "cpu": 8000,
+      "gpu": {
+        "units": 2,
+        "attributes": {
+          "vendor": {
+            "nvidia": {
+              "model": "a100",
+              "ram": "80gi",
+              "interface": "sxm4"
+            }
+          }
+        }
+      },
+      "storage": [
+        {
+          "class": "ephemeral",
+          "size": 107374182400
+        }
+      ],
+      "count": 1,
+      "endpoint_quantity": 1,
+      "ip_lease_quantity": 0
+    }
+  ],
+  "price": {
+    "denom": "uakt",
+    "amount": "1000.00"
+  },
+  "price_precision": 6
+}
+

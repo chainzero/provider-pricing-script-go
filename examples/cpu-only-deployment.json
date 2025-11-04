@@ -1,0 +1,23 @@
+{
+  "resources": [
+    {
+      "memory": 4294967296,
+      "cpu": 2000,
+      "storage": [
+        {
+          "class": "ephemeral",
+          "size": 21474836480
+        }
+      ],
+      "count": 1,
+      "endpoint_quantity": 1,
+      "ip_lease_quantity": 0
+    }
+  ],
+  "price": {
+    "denom": "uakt",
+    "amount": "100.00"
+  },
+  "price_precision": 6
+}
+

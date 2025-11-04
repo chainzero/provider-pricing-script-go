@@ -52,7 +52,9 @@ func readCachedPrice(cacheFile string) (float64, error) {
 
 // fetchPriceFromAPI tries to fetch the AKT price from primary and fallback APIs.
 func fetchPriceFromAPI() (float64, error) {
-	primaryURL := "https://api-osmosis.imperator.co/tokens/v2/price/AKT"
+	// Primary: DIA Data API (same as bash script)
+	primaryURL := "https://api.diadata.org/v1/assetQuotation/Osmosis/ibc-C2CFB1C37C146CF95B0784FD518F8030FEFC76C5800105B1742FB65FFE65F873"
+	// Fallback: CoinGecko API
 	fallbackURL := "https://api.coingecko.com/api/v3/simple/price?ids=akash-network&vs_currencies=usd"
 
 	price, err := fetchPriceFromURL(primaryURL)
@@ -84,9 +86,15 @@ func fetchPriceFromURL(url string) (float64, error) {
 func extractPrice(data interface{}) float64 {
 	switch v := data.(type) {
 	case map[string]interface{}:
+		// Try DIA Data API format (capital P "Price")
+		if price, ok := v["Price"].(float64); ok {
+			return price
+		}
+		// Try lowercase "price" for other APIs
 		if price, ok := v["price"].(float64); ok {
 			return price
 		}
+		// Try CoinGecko format
 		if nested, ok := v["akash-network"].(map[string]interface{}); ok {
 			if price, ok := nested["usd"].(float64); ok {
 				return price

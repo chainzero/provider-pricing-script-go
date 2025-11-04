@@ -1,0 +1,23 @@
+{
+  "resources": [
+    {
+      "memory": 268435456,
+      "cpu": 100,
+      "storage": [
+        {
+          "class": "default",
+          "size": 268435456
+        }
+      ],
+      "count": 1,
+      "endpoint_quantity": 1,
+      "ip_lease_quantity": 0
+    }
+  ],
+  "price": {
+    "denom": "uakt",
+    "amount": "100000.000000000000000000"
+  },
+  "price_precision": 18
+}
+

@@ -1,0 +1,19 @@
+{
+  "resources": [
+    {
+      "memory": 2147483648,
+      "cpu": 1000,
+      "storage": [
+        {
+          "class": "ephemeral",
+          "size": 10737418240
+        }
+      ],
+      "count": 1,
+      "endpoint_quantity": 1,
+      "ip_lease_quantity": 0
+    }
+  ],
+  "price_precision": 6
+}
+
