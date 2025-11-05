@@ -8,8 +8,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	dtypes "github.com/akash-network/akash-api/go/node/deployment/v1beta3"
-	"github.com/akash-network/akash-api/go/node/types/v1beta3"
+	dtypes "pkg.akt.dev/go/node/deployment/v1beta4"
+	"pkg.akt.dev/go/node/types/v1beta3"
 )
 
 // Define default price targets as constants

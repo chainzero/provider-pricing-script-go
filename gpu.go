@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	dtypes "github.com/akash-network/akash-api/go/node/deployment/v1beta3"
+	dtypes "pkg.akt.dev/go/node/deployment/v1beta4"
 )
 
 // ParseGPUPriceMappings parses a string of GPU model to price mappings and returns a map

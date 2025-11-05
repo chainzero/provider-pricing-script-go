@@ -3,7 +3,7 @@ package pricing
 import (
 	"encoding/json"
 
-	dtypes "github.com/akash-network/akash-api/go/node/deployment/v1beta3"
+	dtypes "pkg.akt.dev/go/node/deployment/v1beta4"
 )
 
 // ResourceRequests holds the calculated resource requirements
